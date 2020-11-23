@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  root to: 'welcome#home'
+  
   devise_for :users, controllers: { registrations: "registrations" }
 
   devise_scope :user do 
