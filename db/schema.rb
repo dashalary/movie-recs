@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_24_002054) do
+ActiveRecord::Schema.define(version: 2020_11_24_230149) do
+
+  create_table "movies", force: :cascade do |t|
+    t.string "title"
+    t.integer "release_year"
+    t.string "genre"
+    t.integer "user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name", default: "", null: false
