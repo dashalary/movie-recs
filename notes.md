@@ -21,3 +21,7 @@ def failure
     redirect_to new_user_registration_url
 end
 
+
+(welcome page)
+ <%= link_to "Sign In", new_user_session_path, class: "btn btn-primary" %><br>
+    <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary" %>
