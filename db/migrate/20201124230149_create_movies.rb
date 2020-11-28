@@ -5,7 +5,7 @@ class CreateMovies < ActiveRecord::Migration[6.0]
       t.integer :release_year
       t.boolean :seen
       t.integer :user_id
-      t.integer "category_id"
+      t.integer :category_id
     end
   end
 end
