@@ -1,12 +1,13 @@
 <p id="notice"><%= notice %></p><br>
 
-<h1>My Movies:</h1>
+<h2>My Movies</h2>
 
 <table>
     <thead>
         <tr>
             <th>Seen</th>
             <th>Title</th>
+            <th>Category</th>
             <th colspan="3"></th>
         </tr>
     </thead>
@@ -15,11 +16,11 @@
         <% @movies.each do |movie| %>
             <tr>
                 <td><%= movie.seen %></td>
-                <td><%= movie.title %></td>
-                <td><%= link_to 'Show', movie %></td>
-                <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
-                <td><%= link_to 'Delete', movie, method: :delete, data: { confirm: 'Are you sure you want to delete this?' }%></td>
+                <td><%= link_to movie.title, movie %></td>
+                <td><%= movie.category.name %></td>
             </tr>
+            <br>
+            <br>
         <% end %>
     </tbody>
 </table><br>

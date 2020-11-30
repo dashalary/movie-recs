@@ -1,0 +1,10 @@
+<br>
+<h2><%= @movie.title %></h2>
+<br>
+<p><strong> Released in: </strong><%= @movie.release_year %></p>
+<p><strong>Category: </strong><%= @movie.category.name%></p>
+<br>
+
+<%= link_to 'Edit', edit_movie_path(@movie) %>  |   
+<%= link_to 'Delete', @movie, method: :delete, data: { confirm: 'Are you sure you want to delete this?' }%>  |
+<%= link_to 'See All Categories', categories_path %>

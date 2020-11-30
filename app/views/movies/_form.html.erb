@@ -4,6 +4,6 @@
     <%= f.label :release_year, "What year was it released in?" %><br>
     <%= f.number_field :release_year %><br>
     <%= f.label :category %><br>
-    <%= collection_select(:movie, :title, Category.all, :name, :name, prompt: "Pick a category that fits this movie best")%><br>
+    <%= f.collection_select(:category_id, Category.all, :id, :name, prompt: "Pick a category that fits this movie best")%><br>
     <%= f.submit class: "btn btn-primary" %>
 <% end %>

@@ -10,7 +10,7 @@ class MoviesController < ApplicationController
     end
 
     def new
-        @movie = Movie.new 
+        @movie = Movie.new(user_id: params[:user_id])
     end
 
     def edit
