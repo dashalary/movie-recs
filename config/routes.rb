@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   get 'movies/seen', to: 'movies#seen'
   resources :movies
-  resources :categories
+  resources :categories, only: [:index, :show]  do 
+    resources :movies, only: [:index, :show, :new]
+  end 
 
   devise_for :users, :controllers => { registrations: 'registrations', omniauth_callbacks: 'callbacks' }
   

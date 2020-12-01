@@ -19,6 +19,10 @@ class CategoriesController < ApplicationController
 
     def show
         @category = Category.find_by(id: params[:id])
+            if @category
+                @movies = current_user.movies.where(category_id: params[:id])
+                render :show 
+            end
     end
 
     def edit
