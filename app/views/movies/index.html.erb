@@ -1,15 +1,13 @@
 <p id="notice"><%= notice %></p><br>
-
-<h2>My Movies</h2>
-
-<table>
+<div class="container">
+  <h2>My Movies</h2>           
+  <table class="table">
     <thead>
-        <tr>
-            <th>Seen</th>
-            <th>Title</th>
-            <th>Category</th>
-            <th colspan="3"></th>
-        </tr>
+      <tr>
+        <th>Seen?</th>
+        <th>Title</th>
+        <th>Category</th>
+      </tr>
     </thead>
 
     <tbody>
@@ -26,3 +24,5 @@
 </table><br>
 
 <%= link_to 'Add a new movie', new_movie_path %>
+
+</div>
