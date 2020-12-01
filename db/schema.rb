@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2020_11_28_005558) do
   create_table "movies", force: :cascade do |t|
     t.string "title"
     t.integer "release_year"
-    t.boolean "seen"
+    t.boolean "seen", default: false
     t.integer "user_id"
     t.integer "category_id"
   end

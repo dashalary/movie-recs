@@ -7,6 +7,10 @@
     <br>
     <%= f.number_field :release_year %><br>
     <br>
+    <%= f.label :seen, "Have you seen it yet?" %><br>
+    <br>
+    <%= f.check_box :seen %><br>
+    <br>
     <%= f.label :category %><br>
     <br>
     <%= f.collection_select(:category_id, Category.all, :id, :name, prompt: "Pick a category or add your own below") %><br>
