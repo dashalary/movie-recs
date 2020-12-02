@@ -1,7 +1,7 @@
 <h1>Movie Categories</h1>
 <br>
 <% @categories.each do |category| %>
-<%= link_to category.name, category_path(category) %><br>
+<%= link_to category.name, category_movies_path(category, @movie) %><br>
 <br>
 <% end %>
 <br>

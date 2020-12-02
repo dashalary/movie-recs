@@ -22,3 +22,8 @@ def failure
 end
 
 
+ if params[:category_id]
+        @movies = current_user.movies.find_by(category_id: params[:category_id])
+       else
+        @movies = current_user.movies
+       end

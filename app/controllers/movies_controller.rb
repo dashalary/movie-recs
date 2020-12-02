@@ -2,15 +2,21 @@ class MoviesController < ApplicationController
     before_action :set_movie, only: [:show, :edit, :update, :destroy]
     before_action :authenticate_user!
 
+
     def index
+       if params[:category_id]
+        @movies = Category.find(params[:category_id]).movies 
+       else
         @movies = current_user.movies
+       end
     end
 
     def show
+        # binding.pry
     end
 
     def new
-        @movie = Movie.new(user_id: params[:user_id])
+        @movie = Movie.new(category_id: params[:category_id])
     end
 
     def edit
@@ -45,7 +51,10 @@ class MoviesController < ApplicationController
     private
 
     def set_movie
-        @movie = Movie.find(params[:id])
+        @movie = current_user.movies.find_by(id: params[:id])
+        if !@movie
+            redirect_to movies_path, notice: "You don't have access to this page."
+        end
     end
 
     def movie_params 

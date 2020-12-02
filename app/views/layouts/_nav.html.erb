@@ -7,6 +7,7 @@
         <% else %>
             <li>You are logged in as <%= current_user.email %></li><br>
             <li><%= link_to 'Your Movies', movies_path %></li><br>
+            <li><%= link_to 'Your Categories', categories_path %></li><br>
             <li><%= link_to 'Log Out', destroy_user_session_path, method: "delete" %></li>
         <% end %>
     </ul>

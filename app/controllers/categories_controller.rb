@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
     before_action :authenticate_user!
 
     def index
-        @categories = Category.all 
+        @categories = current_user.categories
     end
     
     def new
@@ -19,19 +19,13 @@ class CategoriesController < ApplicationController
     end
 
     def show
-        @category = Category.find_by(id: params[:id])
+        @category = current_user.categories.find_by(id: params[:id])
             if @category
                 @movies = current_user.movies.where(category_id: params[:id])
                 render :show 
             end
     end
 
-    def edit
-        @category = Category.find_by(id: params[:id])
-    end
-
-    def update
-    end
 
     private
 
