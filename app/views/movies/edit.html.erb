@@ -1,5 +1,12 @@
 <h1>Edit this movie:</h1><br>
 
+<% if @movie.errors.any? %>
+        <% @movie.errors.full_messages.each do |error_message| %>
+        <span class="error-text", style="color:red"><strong><%= error_message %> !!! </strong></span><br>
+        <% end %>
+    <% end %>
+<br>
+
 <%= render 'form' %>
 <br>
 <%= link_to 'Show', @movie %> |
