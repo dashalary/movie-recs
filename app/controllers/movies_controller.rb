@@ -4,6 +4,7 @@ class MoviesController < ApplicationController
 
 
     def index
+      
        if params[:category_id]
         @movies = Category.find(params[:category_id]).movies 
        else
