@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p><br>
 
 <div class="container">
-  <h2>My Movies</h2>           
+  <h2 style="text-align:center;">Seen Movies</h2><br>           
   <table class="table">
     <thead>
       <tr>
@@ -18,12 +18,8 @@
                 <td><%= link_to movie.title, movie %></td>
                 <td><%= movie.category.name %></td>
             </tr>
-            <br>
-            <br>
         <% end %>
     </tbody>
 </table><br>
-
-<%= link_to 'Add a new movie', new_movie_path %>
 
 </div>
