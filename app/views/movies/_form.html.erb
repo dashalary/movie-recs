@@ -15,11 +15,12 @@
     <br>
     <%= f.collection_select(:category_id, Category.all, :id, :name, prompt: "Pick a category or add your own below") %><br>
     <br>
-    <%= f.fields_for :category, Category.new do |movie_category| %><br>
-    <%= movie_category.label "Create My Own Category"%><br>
-    <br>
-    <%= movie_category.text_field :name %>
-    <% end%>
+        <%= f.fields_for :category, Category.new do |movie_category| %><br>
+            <%= movie_category.label "Create My Own Category"%><br>
+            <br>
+            <%= movie_category.text_field :name %>
+        <% end%>
     <br><br><br>
+
     <%= f.submit class: "btn btn-primary" %>
 <% end %>

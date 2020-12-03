@@ -1,5 +1,6 @@
 <h1>Add a new movie here:</h1><br>
 <br>
+
     <% if @movie.errors.any? %>
         <% @movie.errors.full_messages.each do |error_message| %>
         <span class="error-text", style="color:red"><strong><%= error_message %> !!! </strong></span><br>
