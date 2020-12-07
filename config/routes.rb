@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   end
 
   root to: 'welcome#home'
+
+  get ':not_found' => redirect('/'), :constraints => { :not_found => /.*/ }
 end
