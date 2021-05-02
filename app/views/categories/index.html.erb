@@ -1,9 +1,9 @@
-<h1 style="text-align:center; text-decoration: underline;">My Movie Categories</h1>
+<br>
+<h4 style="text-align:center;">Movie Categories</h4>
 <br>
 <ul>
 <% @categories.each do |category| %>
-<li><%= link_to category.name, category_movies_path(category, @movie) %></li><br>
-<br>
+<li><%= link_to category.name, category_movies_path(category, @movie) %></li>
 <% end %>
 </ul>
 <br>

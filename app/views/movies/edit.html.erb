@@ -1,4 +1,4 @@
-<h1>Edit this movie:</h1><br>
+<br>
 
 <% if @movie.errors.any? %>
         <% @movie.errors.full_messages.each do |error_message| %>
@@ -10,4 +10,5 @@
 <%= render 'form' %>
 <br>
 <%= link_to 'Show', @movie %> |
-<%= link_to 'Go Back', movies_path %>
+<%= link_to 'Go Back to All Movies', movies_path %><br>
+<br>
