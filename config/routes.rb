@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   get 'movies/seen', to: 'movies#seen'
-  get 'movies/oldest', to: 'movies#oldest'
+  # get 'movies/oldest', to: 'movies#oldest'
   resources :movies
-  resources :categories, only: [:index, :show]  do 
+  resources :categories, only: [:index, :show, :new]  do 
     resources :movies, only: [:index, :show, :new]
   end 
 

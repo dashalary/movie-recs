@@ -23,6 +23,40 @@ body, input, textarea, select {
 li {
     list-style: inside;
     text-align: center;
+    font-family: 'Inter';
     margin-left: auto;
-    margin-right: auto;
+    /* margin-right: auto; */ 
+}
+
+h3, h4 {
+    text-align: center;
+}
+
+/* Form Styling */
+
+.form {
+    position: relative;
+    height: auto;
+    padding: 10px;
+    
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+input[type='checkbox'] {
+    width: 15px;
+    height: 15px;
+}
+
+/* Buttons */
+
+
+#new-movie-btn {
+    background-color: #1E90FF;
+    color: white;
+    border-radius: 12px;
+    border: none;
+    font-size: 17px;
+    width: 200px;
 }

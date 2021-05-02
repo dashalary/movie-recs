@@ -1,26 +1,28 @@
+<div class="form">
 <%= form_for(@movie) do |f| %>
-    <%= f.label :title %>
-    <br>
+
+    <%= f.label :title, "Title: " %>
     <%= f.text_field :title %><br>
     <br>
-    <%= f.label :release_year, "When was it released?" %><br>
-    <br>
+
+    <%= f.label :release_year, "Year:" %>
     <%= f.number_field :release_year %><br>
     <br>
-    <%= f.label :seen, "Have you seen it yet?" %><br>
-    <br>
-    <%= f.check_box :seen %><br>
-    <br>
-    <%= f.label :category %><br>
-    <br>
-    <%= f.collection_select(:category_id, Category.all, :id, :name, prompt: "Pick a category or add your own below") %><br>
+
+    <%= f.label :category, "Category:" %>
+    
+    <%= f.collection_select(:category_id, Category.all, :id, :name, prompt: "Pick from existing categories") %>
     <br>
         <%= f.fields_for :category, Category.new do |movie_category| %><br>
-            <%= movie_category.label "Create My Own Category"%><br>
-            <br>
+            <%= movie_category.label "Create a New Category: "%>
             <%= movie_category.text_field :name %>
         <% end%>
-    <br><br><br>
+    <br><br>
+
+    <%= f.label :seen, "Have you seen it yet?" %>
+    <%= f.check_box :seen %><br>
+    <br>
 
     <%= f.submit class: "btn btn-primary" %>
 <% end %>
+</div>
