@@ -1,3 +1,4 @@
+<p id="notice"><%= notice %></p><br>
 <div class="container">
   <h2 style="text-align:center;">My Movies</h2>
   <br>
@@ -13,7 +14,7 @@
     <tbody>
         <% @movies.each do |movie| %>
             <tr>
-                <td><%= movie.seen %></td>
+                <td><%= movie.seen ? "Yes" : "No" %></td>
                 <td><%= link_to movie.title, movie %></td>
                 <td><%= movie.category.name %></td>
             </tr>

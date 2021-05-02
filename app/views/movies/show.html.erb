@@ -3,7 +3,7 @@
 <br>
 <p><strong> Released in: </strong><%= @movie.release_year %></p>
 <p><strong>Category: </strong><%= @movie.category.name%></p>
-<p><strong>Seen: </strong><%= @movie.seen %></p>
+<p><strong>Seen: </strong><%= @movie.seen ? "Yes" : "No" %></p>
 <br>
 
 <%= link_to 'Edit', edit_movie_path(@movie) %>  |   

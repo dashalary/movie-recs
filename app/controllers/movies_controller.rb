@@ -4,11 +4,11 @@ class MoviesController < ApplicationController
 
 
     def index
-      
        if params[:category_id]
         @movies = Category.find(params[:category_id]).movies 
        else
         @movies = current_user.movies
+        # render json: @movies.to_json
        end
     end
 
@@ -48,6 +48,10 @@ class MoviesController < ApplicationController
     def seen
         @movies = current_user.movies.seen
     end
+
+    # def oldest
+    #     @oldestmovie = current_user.movies.oldest
+    # end
 
     private
 
