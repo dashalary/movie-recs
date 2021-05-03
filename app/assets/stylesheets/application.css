@@ -33,14 +33,17 @@ li {
     font-family: 'Inter';
     margin-left: auto;
     text-decoration: none;
-    /* margin-right: auto; */ 
+    font-size: 17px;
+    line-height: 1.9;
+    margin-right: auto; 
 }
 
 a:link {
     text-decoration: none;
 }
 
-h3, h4 {
+
+h3, h4, h5, h6 {
     text-align: center;
 }
 
@@ -63,11 +66,16 @@ input[type='checkbox'] {
 
 /* Buttons */
 
-#new-movie-btn {
-    background-color: #1E90FF;
+#new-movie-btn, #add-movie-to-category {
+    /* background-color: #1E90FF; */
     color: white;
     border-radius: 12px;
     border: none;
     font-size: 17px;
     width: 200px;
+    padding: 8px;
+}
+
+#movie-info {
+    word-spacing: 10px;
 }

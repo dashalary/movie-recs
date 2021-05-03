@@ -3,9 +3,11 @@
 <div class="center">
 <h4><b><%= @movie.title %><b></h4>
 <br>
-<p><strong> Released in: </strong><%= @movie.release_year %></p>
+<div id="movie-info">
+<p><strong> Release-date: </strong><%= @movie.release_year %></p>
 <p><strong>Category: </strong><%= @movie.category.name%></p>
 <p><strong>Seen: </strong><%= @movie.seen ? "Yes" : "No" %></p>
+</div>
 <br>
 
 

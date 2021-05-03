@@ -2,11 +2,11 @@ class CategoriesController < ApplicationController
     before_action :authenticate_user!
 
     def index
-        @categories = current_user.categories
+        @categories = current_user.categories.uniq
     end
     
     def new
-        @category = Category.new
+        @category = Category.new(movie_id: params[:movie_id])
     end
 
     def create

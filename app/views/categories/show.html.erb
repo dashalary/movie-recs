@@ -1,5 +1,5 @@
 <br>
-<h4>Your movies in <i><%= @category.name %></i> category</h4><br>
+<h5>Movies in <i><%= @category.name %></i> category</h5><br>
 <ul>
 <% @movies.each do |movie| %>
 <li><%= link_to movie.title, movie_path(movie) %></li>
@@ -8,5 +8,6 @@
 <ul>
 
 <div class="center">
-    <%= link_to "Add Movies", new_category_movie_path(@category) %>
+<br>
+    <button id="add-movie-to-category"><%= link_to "Add More Movies", new_category_movie_path(@category) %></button>
 </div>
