@@ -20,6 +20,11 @@ body, input, textarea, select {
     width: 50%
 }
 
+.welcome {
+    position: relative;
+    text-align: center;
+}
+
 li {
     list-style: inside;
     text-align: center;
