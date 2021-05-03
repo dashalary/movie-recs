@@ -20,6 +20,8 @@ body, input, textarea, select {
     width: 50%
 }
 
+/* Welcome page */
+
 .welcome {
     position: relative;
     text-align: center;
@@ -30,7 +32,12 @@ li {
     text-align: center;
     font-family: 'Inter';
     margin-left: auto;
+    text-decoration: none;
     /* margin-right: auto; */ 
+}
+
+a:link {
+    text-decoration: none;
 }
 
 h3, h4 {
@@ -55,7 +62,6 @@ input[type='checkbox'] {
 }
 
 /* Buttons */
-
 
 #new-movie-btn {
     background-color: #1E90FF;

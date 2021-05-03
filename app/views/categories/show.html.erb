@@ -1,9 +1,11 @@
-<h4>Your movies in this category</h4><br>
 <br>
+<h4>Your movies in <i><%= @category.name %></i> category</h4><br>
+<ul>
 <% @movies.each do |movie| %>
-<%= link_to movie.title, movie_path(movie) %>
+<li><%= link_to movie.title, movie_path(movie) %></li>
 <br>
 <% end %>
+<ul>
 
 <div class="center">
     <%= link_to "Add Movies", new_category_movie_path(@category) %>
